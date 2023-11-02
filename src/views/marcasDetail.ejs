@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("./partials/head") -%>
+
+<body>
+    <div class ="logowhatsapp">
+        <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+    </div>
+
+<!-- COMIENZO HEADER -->
+<%- include ("./partials/header") -%>
+
+        <main>
+            <div>
+            <div class = "fotosyprecio_detalle">
+            <div class = "fotos_detalle_producto">
+                <div class = "bestseller">
+                    <img class="principal" src="/img/products/<%=marca.imagen%>">
+                </div>
+                <div class = "foto_detalle_producto_secundarias">
+                    <img class="secundaria" src="/img/products/<%=marca.imagen%>">
+                    <img class="secundaria" src="/img/products/<%=marca.imagen%>">
+                    <img class="secundaria" src="/img/products/<%=marca.imagen%>">
+                </div>
+            </div>  
+            <section class ="cajaprecio_detalle">
+                <div class ="titulo_detalle_producto">
+                    <%=marca.marca_perfume%> <%=marca.nombre_perfume%> <%=marca.tamaño%> | <%=marca.concentracion%> | 
+                    <%=marca.familia_perfume%> | <%=marca.id_categoria_perfume %> |
+                </div>
+                
+              
+                <div class = "precio">
+                    Precio: COP <%=marca.precio%>
+                </div>
+                <div class = "botones_detalle">
+                    <a href = "/carrito"><button class = "boton">Comprar Ahora</button></a>
+                    <a href="/carrito"><button class = "boton">Agregar al carrito</button></a>
+                    <a href="/marcas/edit/ <%= marca.marca_id %>"></a><button class = "boton">Editar Imagenes</button></a>
+                    <a href = "/marcas/edit/ <%= marca.marca_id %>"><button class = "boton">Editar Producto</button></a>
+                    <form action="/marcas/delete/ <%= marca.marca_id %>?_method=PUT" method="POST">                   
+                    <button class = "boton" type="submit">Borrar Producto</button>
+                    <a href="/marcas" class = "boton">Listado de Productos</a>
+                    </form>
+                </div>
+            </section>
+            </div>
+            <div class = "detalleymarcas">
+            <section class ="detallecompleto">
+                <div class="encabezado_contenido_detalle_prod">
+                    <div class = "solapas_contenido_detalle_prod">Descripción</div>
+                    <div class = "solapas_contenido_detalle_prod">Opcionales</div>
+                    <div class = "solapas_contenido_detalle_prod">Aplicaciones</div>
+                </div>
+                <div class ="contenido_detalle">
+                    <div class = "titulos_contenido_detalle_prod">Marca
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                        <%=marca.marca_perfume%>
+                    </div>
+
+                    <div class = "titulos_contenido_detalle_prod">Nombre
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                        <%=marca.nombre_perfume%>
+                    </div>
+
+                    <div class = "titulos_contenido_detalle_prod">Tamaño
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                        <%=marca.tamaño%>
+                    </div>
+
+                    <div class = "titulos_contenido_detalle_prod">Oferta
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                        <%=marca.oferta%>
+                    </div>
+
+                    <div class = "titulos_contenido_detalle_prod">Cantidad Vendida
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                        <%=marca.cant_vendida%>
+                    </div>
+                    
+                    <div class = "titulos_contenido_detalle_prod">Concentracion
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                        <%=marca.concentracion%><br>
+                    </div>
+
+                    <div class = "titulos_contenido_detalle_prod">Familia Olfativa
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                        <%=marca.familia_perfume%>
+                    </div>
+
+                    <div class = "titulos_contenido_detalle_prod">Genero
+                    </div>
+                    <div class = "contenido_detalle_prod">
+                         <%=marca.id_categoria_perfume %>  <br>
+                        
+                    </div>
+                </div>                      
+            </section> 
+            <section class = "marcas">
+                    <img class="logomarcas" src="/img/Alienware-Logo-1.png">
+                    <img class="logomarcas" src="/img/radeonlogo.jfif">
+                    <img class="logomarcas" src="/img/windows11logo.png">
+            </section>
+            </div>
+            </div>
+        </main>
+
+    <!-- COMIENZO FOOTER -->
+
+    <%- include ("./partials/footer") -%>
+
+    
+    <script src="/jquery/jquery.js"></script>
+    <script src="/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/jquery.lettering.js"></script>
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtxtJ-dayUKUqBGfykFVXwZiBRzsIx9aY&callback=initMap" async defer></script>	
+
+
+    </body>
+</html>

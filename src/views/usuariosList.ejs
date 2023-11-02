@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("./partials/head") -%>
+
+<!-- COMIENZO BODY -->
+<body>
+        <div class ="logowhatsapp">
+            <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+        </div>
+
+<%- include ("./partials/header") -%>
+
+        <main>
+
+            <a href = "/usuarios/add"><button class = "boton">Crear Usuario</button></a>
+
+        <section >
+            <h2>Usuarios Registrados</h2>
+            <div class="listadoproductos">      
+                <% usuarios.forEach(function (usuario) { %>
+               <div class="bestseller"> 
+                    <a href = "/users/profile/<%=usuario.usuario_id%>">
+                    <img class="imagenMV" src="/img/users/<%=usuario.url_imagen%>">
+                    
+                        <p><%=usuario.nombre_usuario%> <%=usuario.apellido_usuario%></</p>
+                        
+                    
+                    </a>
+                </div> 
+                <% }) %> 
+            </div>
+        </section>
+    </main>
+
+    <!-- COMIENZO FOOTER -->
+
+    <%- include ("./partials/footer") -%>
+
+    
+    <script src="/jquery/jquery.js"></script>
+    <script src="/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/jquery.lettering.js"></script>
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtxtJ-dayUKUqBGfykFVXwZiBRzsIx9aY&callback=initMap" async defer></script>	
+
+
+    </body>
+</html>

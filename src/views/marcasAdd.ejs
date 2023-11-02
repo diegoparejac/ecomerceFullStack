@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("./partials/head") -%>
+
+<body>
+    <div class ="logowhatsapp">
+        <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+    </div>
+
+<!-- COMIENZO HEADER -->
+<%- include ("./partials/header") -%>
+
+<main>
+
+ 
+    <div class = "tituloregistro">
+        <h2>Crear nuevo Producto</h2>
+    </div>
+
+    <form class = "listadoregistro" action="/marcas/create" method="post">
+
+        <div class = "cajaregistro">
+            <div class = "camposregistro">
+
+
+        <label for="marca_perfume">Marca perfume: </label>
+        <input type="text" id="" name="marca_perfume" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="nombre_perfume">Nombre perfume: </label>
+        <input type="text" id="" name="nombre_perfume" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="tamaño">Tamaño: </label>
+        <input type="text" id="" name="tamaño" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="cant_vendida">Cant vendida: </label>
+        <input type="number" id="" name="cant_vendida" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="imagen_banner">Imagen banner: </label>
+        <input type="file" id="" name="imagen_banner" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="concentracion">Concentracion: </label>
+        <input type="text" id="" name="concentracion" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="familia_perfume">Familia perfume: </label>
+        <input type="text" id="" name="familia_perfume" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="precio">Precio: </label>
+        <input type="number" id="" name="precio" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="stock">Stock: </label>
+        <input type="number" id="" name="stock" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="oferta">Oferta: </label>
+        <input type="text" id="" name="oferta" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="imagen">Imagen: </label>
+        <input type="file" id="" name="imagen" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+        <label for="clave">Clave: </label>
+        <input type="text" id="" name="clave" required><br>
+    </div>        
+    <div class = "camposregistro">
+
+
+        <label for="idcategoria_perfume">Género</label>
+
+        <select name="id_categoria_perfume" id="" required><br>
+
+            <option value="">Seleccione la categoria</option>
+            <% allCategorias.forEach(categoria => { %>
+            <option value="<%= categoria.id_categoria %>"> <%= categoria.cat_perfume %> </option>
+           <% }) %>
+
+
+        </select>
+
+    </div> 
+</div>
+
+<div class ="cajabotones">
+    <div>
+
+        <button type="submit">Agregar Perfume</button>
+
+        <a href="/marcas">Listado de marcas</a>
+
+    </div>
+</div>
+    </form>
+    <!-- COMIENZO FOOTER -->
+
+<%- include ("./partials/footer") -%>
+
+
+<script src="/jquery/jquery.js"></script>
+<script src="/js/vendor/modernizr-3.12.0.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/jquery.animateNumber.min.js"></script>
+<script src="/js/jquery.countdown.min.js"></script>
+<script src="/js/jquery.lettering.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtxtJ-dayUKUqBGfykFVXwZiBRzsIx9aY&callback=initMap" async defer></script>	
+
+
+</main>
+
+    </body>
+</html>

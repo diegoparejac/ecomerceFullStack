@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("./partials/head") -%>
+
+<!-- COMIENZO BODY -->
+<body>
+        <div class ="logowhatsapp">
+            <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+        </div>
+
+<%- include ("./partials/header") -%>
+
+        <main>
+
+            <a href="/marcas/Add"><button class = "boton">Agregar Producto</button></a>
+            
+
+            <section class="bestsellers contenedor seccion">
+                <h2>Listado de Productos</h2>
+            
+                <ul class="mas-vendidos clearfix">
+                
+                    
+                    <% for(let i = 0; i < marcas.length; i++){ %>
+                        <li>
+                            <div class="bestseller">
+
+                        <a href="/marcas/detail/ <%=marcas[i].marca_id %>"> 
+                        
+                        <img  src="/img/products/<%=marcas[i].imagen %>">
+                        
+                        <p><%= marcas[i].marca_perfume %> <%= marcas[i].nombre_perfume %></p>
+                        
+                    </a>
+                        
+                    </div>
+                </li>  
+                
+                    <% } %> 
+                </div>
+            </section>
+       
+    </main>    
+
+    <!-- COMIENZO FOOTER -->
+
+    <%- include ("./partials/footer") -%>
+
+    
+    <script src="/jquery/jquery.js"></script>
+    <script src="/js/vendor/modernizr-3.12.0.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
+    <script src="/js/jquery.lettering.js"></script>
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtxtJ-dayUKUqBGfykFVXwZiBRzsIx9aY&callback=initMap" async defer></script>	
+
+
+    </body>
+</html>
+

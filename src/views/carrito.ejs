@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<!-- COMIENZO DEL HEAD -->
+
+<%- include ("./partials/head") -%>
+
+<body>
+    <div class ="logowhatsapp">
+        <img src="/img/whatsapp-logo.svg"  alt="Whatsapp" class ="logosredes"/>
+    </div>
+
+<!-- COMIENZO HEADER -->
+<%- include ("./partials/header") -%>
+
+
+     <section class="seccion contenedor">
+       <h2>Registro de Usuarios</h2>
+       <form id="registro" class="registro" action="index.html" method="post">
+         <div id="datos_usuario" class="registro caja clearfix">
+           <div class="campo">
+             <label for="nombre">Nombre</label>
+             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+           </div>
+           <div class="campo">
+             <label for="apellido">Apellido</label>
+             <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" >
+           </div>
+           <div class="campo">
+             <label for="email">E-mail</label>
+             <input type="email" id="email" name="email" placeholder="Tu email">
+           </div>
+           <div id="error">
+
+           </div>
+
+         </div> <!--datos ususario-->
+
+        <div id="paquetes" class="paquetes">
+             <h3>Elige la promo que deseas</h3>
+
+
+
+           <ul class="lista-precios clearfix">
+             <li>
+               <div class="tabla-precio">
+                 <h3>2 Perfumes Hombre y/o unisex</h3>
+                 <p class="numero">$90</p>
+                 <ul>
+                   <li>Decants Gratis</li>
+                   <li>Todas las marcas</li>
+                   <li>Todas las referencias</li>
+                 </ul>
+                 <div class="orden">
+                   <label for="Perfumes_Hombre">Cantidad deseada</label>
+                   <input type="number" min="0" id="Perfumes_Hombre" size="3" placeholder="0" name="" value="">
+
+                 </div>
+
+               </div>
+             </li>
+             <li>
+               <div class="tabla-precio">
+                 <h3>4 Perfumes Hombre, Mujer y/o unisex</h3>
+                 <p class="numero">$150</p>
+                 <ul>
+                   <li>Decants Gratis</li>
+                   <li>Todas las marcas</li>
+                   <li>Todas las referencias</li>
+                 </ul>
+                 <div class="orden">
+                   <label for="Perfumes_Hombre_mujer">Cantidad deseada</label>
+                   <input type="number" min="0" id="Perfumes_Hombre_mujer" size="3" placeholder="0" name="" value="">
+
+                 </div>
+
+               </div>
+             </li>
+             <li>
+               <div class="tabla-precio">
+                 <h3>2 Perfumes Mujer y/o unisex</h3>
+                 <p class="numero">$90</p>
+                 <ul>
+                   <li>Decants Gratis</li>
+                   <li>Todas las marcas</li>
+                   <li>Todas las referencias</li>
+                 </ul>
+                 <div class="orden">
+                   <label for="Perfumes_mujer">Cantidad deseada</label>
+                   <input type="number" min="0" id="Perfumes_mujer" size="3" placeholder="0" name="" value="">
+
+                 </div>
+               </div>
+             </li>
+           </ul>
+        </div> <!--paquetes-->
+
+        <div id="perfumes" class="perfumes clearfix">
+            <h3>Elige tus Perfumes</h3>
+            <div class="caja">
+              <div id="hombres" class="contenido-perfumes clearfix">
+                <h4>Hombres</h4>
+                   <div class="">
+                      <p>Armaf</p>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_01" value="armaf_01">Tag Him</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_02" value="armaf_02">Italiano Uomo</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_03" value="armaf_03">Club de Nuit Intense</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_04" value="armaf_04">Ventana</label>
+                   </div>
+                   <div class="">
+                      <p>Carolina Herrera</p>
+                      <label for=""><input type="checkbox" name="registro" id="carolina_01" value="carolina_01">CH</label>
+                      <label for=""><input type="checkbox" name="registro" id="carolina_02" value="carolina_02">CH Prive</label>
+                   </div>
+                   <div class="">
+                      <p>Hugo Boss</p>
+                      <label for=""><input type="checkbox" name="registro" id="boss_01" value="boss_01">Boss Bottled</label>
+                      <label for=""><input type="checkbox" name="registro" id="boss_02" value="boss_02">Boss Bottled Unlimited</label>
+                   </div>
+                   <div class="">
+                      <p>Davidoff</p>
+                      <label for=""><input type="checkbox" name="registro" id="davidoff_01" value="davidoff_01">Cool Water</label>
+                   </div>
+                   <div class="">
+                      <p>Montblanc</p>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_01" value="montblanc_01">Emblem</label>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_02" value="montblanc_02">Individuel</label>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_03" value="montblanc_03">Starwalker</label>
+                   </div><div class="">
+                      <p>Bvlgari</p>
+                      <label for=""><input type="checkbox" name="registro" id="bvlgari_01" value="bvlgari_01">Aqua Marine</label>
+                   </div>
+                   <div class="">
+                      <p>Perry Ellis</p>
+                      <label for=""><input type="checkbox" name="registro" id="ellis_01" value="ellis_01">Cool Water</label>
+                   </div>
+              </div> <!--hombres-->
+              <div id="mujeres" class="contenido-perfumes clearfix">
+                <h4>Mujeres</h4>
+                   <div class="">
+                      <p>Armaf</p>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_05" value="armaf_05">Tag Him</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_06" value="armaf_06">Italiano Uomo</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_07" value="armaf_07">Club de Nuit Intense</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_08" value="armaf_08">Ventana</label>
+                   </div>
+                   <div class="">
+                      <p>Carolina Herrera</p>
+                      <label for=""><input type="checkbox" name="registro" id="carolina_03" value="carolina_03">CH</label>
+                      <label for=""><input type="checkbox" name="registro" id="carolina_04" value="carolina_04">CH Prive</label>
+                   </div>
+                   <div class="">
+                      <p>Hugo Boss</p>
+                      <label for=""><input type="checkbox" name="registro" id="boss_03" value="boss_03">Boss Bottled</label>
+                      <label for=""><input type="checkbox" name="registro" id="boss_04" value="boss_04">Boss Bottled Unlimited</label>
+                   </div>
+                   <div class="">
+                      <p>Davidoff</p>
+                      <label for=""><input type="checkbox" name="registro" id="davidoff_02" value="davidoff_02">Cool Water</label>
+                   </div>
+                   <div class="">
+                      <p>Montblanc</p>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_04" value="montblanc_04">Emblem</label>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_05" value="montblanc_05">Individuel</label>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_06" value="montblanc_06">Starwalker</label>
+                   </div><div class="">
+                      <p>Bvlgari</p>
+                      <label for=""><input type="checkbox" name="registro" id="bvlgari_02" value="bvlgari_02">Aqua Marine</label>
+                   </div>
+                   <div class="">
+                      <p>Perry Ellis</p>
+                      <label for=""><input type="checkbox" name="registro" id="ellis_02" value="ellis_02">360 Red</label>
+                   </div>
+              </div> <!--mujeres-->
+              <div id="unisex" class="contenido-perfumes clearfix">
+                <h4>Unisex</h4>
+                   <div class="">
+                      <p>Armaf</p>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_01" value="armaf_01">Tag Him</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_02" value="armaf_02">Italiano Uomo</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_03" value="armaf_03">Club de Nuit Intense</label>
+                      <label for=""><input type="checkbox" name="registro" id="armaf_04" value="armaf_04">Ventana</label>
+                   </div>
+                   <div class="">
+                      <p>Montblanc</p>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_01" value="montblanc_01">Emblem</label>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_02" value="montblanc_02">Individuel</label>
+                      <label for=""><input type="checkbox" name="registro" id="montblanc_03" value="montblanc_03">Starwalker</label>
+                   </div>
+                   <div class="">
+                      <p>Carolina Herrera</p>
+                      <label for=""><input type="checkbox" name="registro" id="carolina_01" value="carolina_01">CH</label>
+                      <label for=""><input type="checkbox" name="registro" id="carolina_02" value="carolina_02">CH Prive</label>
+                   </div>
+                   <div class="">
+                      <p>Hugo Boss</p>
+                      <label for=""><input type="checkbox" name="registro" id="boss_01" value="boss_01">Boss Bottled</label>
+                      <label for=""><input type="checkbox" name="registro" id="boss_02" value="boss_02">Boss Bottled Unlimited</label>
+                   </div>
+                   <div class="">
+                      <p>Davidoff</p>
+                      <label for=""><input type="checkbox" name="registro" id="davidoff_01" value="davidoff_01">Cool Water</label>
+                   </div>
+
+                   <div class="">
+                      <p>Bvlgari</p>
+                      <label for=""><input type="checkbox" name="registro" id="bvlgari_01" value="bvlgari_01">Aqua Marine</label>
+                   </div>
+                   <div class="">
+                      <p>Perry Ellis</p>
+                      <label for=""><input type="checkbox" name="registro" id="ellis_01" value="ellis_01">Cool Water</label>
+                   </div>
+              </div> <!--unisex-->
+            </div> <!--caja-->
+        </div> <!--perfumes-->
+
+        <div id="resumen" class="resumen">
+          <h3>Pago y extras</h3>
+          <div class="caja clearfix">
+            <div class="extras">
+              <div class="orden">
+                <label for="camisa_tienda">Camisa de la tienda $6 <small>(promocion 7% descuento)</small> </label>
+                <input type="number" min="0" id="camisa_tienda" size="3" placeholder="0" ></input>
+
+              </div> <!--orden-->
+              <div class="orden">
+                <label for="travel">Tamaño mini para viaje $2<small>(Todas las marcas)</small> </label>
+                <input type="number" min="0" id="mini" size="3" placeholder="0" ></input>
+
+              </div> <!--orden-->
+              <div class="orden">
+                <label for="regalo">Seleccione un regalo</label> <br>
+                <select id="regalo" required>
+                  <option value="">-seleccione un regalo--</option>
+                  <option value="MINI">Tamaño mini para viaje</option>
+                  <option value="pul">Pulsera</option>
+                  <option value="LAP">Lapicero</option>
+
+                </select>
+
+              </div> <!--orden-->
+
+              <input type="button" id="calcular" class="button" value="calcular">
+
+
+            </div> <!--extras-->
+            <div class="total">
+              <p>Resumen:</p>
+              <div id="lista-productos">
+
+              </div>
+              <p>Total</p>
+              <div id="suma-total">
+
+              </div>
+              <input id="btnregistro" type="submit" class="button" value="pagar">
+
+            </div> <!--total-->
+
+          </div> <!--caja-->
+
+        </div> <!--resumen-->
+
+       </form>
+
+     </section>
+
+<!-- COMIENZO DEL FOOTER -->
+
+<%- include ("./partials/footer") -%>
+
+
+
+<script src="/jquery/jquery.js"></script>
+<script src="/js/vendor/modernizr-3.12.0.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/jquery.animateNumber.min.js"></script>
+<script src="/js/jquery.countdown.min.js"></script>
+<script src="/js/jquery.lettering.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtxtJ-dayUKUqBGfykFVXwZiBRzsIx9aY&callback=initMap" async defer></script>	
+
+</body>
+
+</html>
